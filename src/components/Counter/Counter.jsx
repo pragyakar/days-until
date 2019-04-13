@@ -32,6 +32,8 @@ class Counter extends React.Component {
       Date.parse(item.date) === nearestDate && 
         this.setState({ 
           nextHoliday: item 
+        }, () => {
+          document.title = 'Days until ' + this.state.nextHoliday.occasion;
         })
       ) 
     );
