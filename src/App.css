@@ -5,15 +5,18 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: #444;
 }
 
 .event-name {
-  font-size: 30px;
+  font-size: 25px;
   margin: 20px;
 }
 
 .event-date {
   font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .event-remarks {
@@ -39,8 +42,10 @@
 
 .cd-digits {
   font-size: 70px;
+  font-weight: 700;
+  font-family: 'Source Code Pro', monospace;
 }
 
 .cd-label {
-  font-size: 30px;
+  font-size: 25px;
 }
