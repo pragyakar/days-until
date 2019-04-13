@@ -63,6 +63,7 @@ class Counter extends React.Component {
 
     return ( 
         <div className="event-container">
+          <p className="app-title">Days until next holiday <span className="logo">@fusemachines</span></p>
           <Clock nextHolidayDate={nextHolidayDate} />
           <span className="event-name">{this.state.nextHoliday.occasion}</span>
           <span className="event-date">({this.state.nextHoliday.date})</span>
