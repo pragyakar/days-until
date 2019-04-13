@@ -1,13 +1,13 @@
 import React from 'react';
-import {HolidayList} from '../../constants/Holidays';
 import Clock from './Clock/Clock';
+import { HolidayList } from '../../constants/Holidays';
 
 class Counter extends React.Component {
 
   constructor(props) {
 
     super(props);
-    
+
     this.state = {
       isLoading: '',
       nextHoliday: {
