@@ -3,3 +3,10 @@ body {
   padding: 0;
   font-family: 'Open Sans', sans-serif;
 }
+
+:root {
+  --primary-color: #1897cb;
+  --secondary-color: #f4fcff;
+  --text-color: #444444;
+  --white-color: #ffffff;
+}
