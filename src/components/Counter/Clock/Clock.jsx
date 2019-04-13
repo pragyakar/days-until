@@ -44,11 +44,27 @@ class Clock extends React.Component {
     const { days, hours, minutes, seconds} = this.state;
 
     return(
-      <div className="clock">
-        <div className="countdown-days"> {this.addZero(days)} days</div>
-        <div className="countdown-hours"> {this.addZero(hours)} hours</div>
-        <div className="countdown-minutes"> {this.addZero(minutes)} minutes</div>
-        <div className="countdown-seconds"> {this.addZero(seconds)} seconds</div>
+      <div className="clock-container">
+        <div className="cd-box"> 
+          <span className="cd-digits">{this.addZero(days)}</span>
+          <br />
+          <span className="cd-label">days</span>
+        </div>
+        <div className="cd-box"> 
+          <span className="cd-digits">{this.addZero(hours)}</span>
+          <br />
+          <span className="cd-label">hours</span>
+        </div>
+        <div className="cd-box"> 
+          <span className="cd-digits">{this.addZero(minutes)}</span>
+          <br />
+          <span className="cd-label">minutes</span>
+        </div>
+        <div className="cd-box"> 
+          <span className="cd-digits">{this.addZero(seconds)}</span>
+          <br />
+          <span className="cd-label">seconds</span>
+        </div>
       </div>
     )
   }

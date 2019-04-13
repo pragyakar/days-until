@@ -1,0 +1,46 @@
+.event-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.event-name {
+  font-size: 30px;
+  margin: 20px;
+}
+
+.event-date {
+  font-size: 25px;
+}
+
+.event-remarks {
+  margin: 10px;
+}
+
+.clock-container {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 10px;
+}
+
+.cd-box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 50px;
+  font-size: 150%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cd-digits {
+  font-size: 70px;
+}
+
+.cd-label {
+  font-size: 30px;
+}
