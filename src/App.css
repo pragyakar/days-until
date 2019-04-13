@@ -24,7 +24,6 @@
   margin: 20px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-gap: 10px;
 }
 
 .cd-box {
@@ -35,6 +34,7 @@
   font-size: 150%;
   text-align: center;
   text-transform: uppercase;
+  margin: 10px;
 }
 
 .cd-digits {
