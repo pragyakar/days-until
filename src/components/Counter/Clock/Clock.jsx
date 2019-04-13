@@ -33,7 +33,6 @@ class Clock extends React.Component {
       seconds: Math.floor((timeDifference / 1000) % 60)
     });
 
-    // console.log(this.props);
   }
   
   addZero(number) {
