@@ -25,11 +25,14 @@ class Counter extends React.Component {
   
   checkNearestEvent() {
     
-    const holiday = HolidayList;
-    const nearestDate = this.getNearestDate(holiday);
+    const holidayList = HolidayList;
+    const today = Date.parse(new Date());
+    const nearestDate = this.getNearestDate(holidayList, today);
 
-    holiday.map((item, index) => ( 
-      Date.parse(item.date) === nearestDate && 
+    console.log('checkNearestDate', nearestDate);
+
+    holidayList.map((item, index) => ( 
+      (Date.parse(item.date) - today) === nearestDate && 
         this.setState({ 
           nextHoliday: item 
         }, () => {
@@ -40,20 +43,29 @@ class Counter extends React.Component {
     
   }
 
-  getNearestDate(holidayList) {
-
+  getNearestDate(holidayList, today) {
     const datesList = holidayList.map((item, index) => { 
-      return Date.parse(item.date);
+      // console.log('getNearestDate', Date.parse(item .date) - today);
+      return Date.parse(item.date) - today;
     });
+    // console.log('nearest', Math.min.apply(null, datesList));
+    // return Math.min.apply(null, datesList);
 
-    return Math.min.apply(null, datesList);
+    var nearest = 0;
+    for (var i = 0; i < datesList.length; i++) {
+      if(datesList[i] > nearest && datesList[i] > 0) {
+        nearest = datesList[i];
+        break;
+      }
+    }
+    console.log('nearest wala', nearest);
+    return nearest;
   }
 
   render() {
 
     const nextHolidayDate = Date.parse(this.state.nextHoliday.date);
-
-    console.log(this.state.nextHoliday);
+    console.log('prop from', nextHolidayDate);
     return ( 
         <div className="event-container">
           <Clock nextHolidayDate={nextHolidayDate} />
