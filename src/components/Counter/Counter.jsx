@@ -5,7 +5,9 @@ import Clock from './Clock/Clock';
 class Counter extends React.Component {
 
   constructor(props) {
+
     super(props);
+    
     this.state = {
       isLoading: '',
       nextHoliday: {
@@ -22,22 +24,39 @@ class Counter extends React.Component {
   }
   
   checkNearestEvent() {
+    
     const holiday = HolidayList;
-    const datesList = holiday.map((item, index) => Date.parse(item.date))
-    const nearestDate = Math.min.apply(null, datesList);
+    const nearestDate = this.getNearestDate(holiday);
+
     holiday.map((item, index) => ( 
-      Date.parse(item.date) === nearestDate && this.setState({ nextHoliday: item })) 
+      Date.parse(item.date) === nearestDate && 
+        this.setState({ 
+          nextHoliday: item 
+        })
+      ) 
     );
+    
+  }
+
+  getNearestDate(holidayList) {
+
+    const datesList = holidayList.map((item, index) => { 
+      return Date.parse(item.date);
+    });
+
+    return Math.min.apply(null, datesList);
   }
 
   render() {
-    const nextHolidayDate = Date.parse('15 April 2019');
+
+    const nextHolidayDate = Date.parse(this.state.nextHoliday.date);
+
     console.log(this.state.nextHoliday);
     return ( 
         <div className="event-container">
           <Clock nextHolidayDate={nextHolidayDate} />
-          {/* <p className="event-name">Days until '{this.state.nextHoliday.occasion}'</p> */}
-          {/* <p className="event-date">{this.state.nextHoliday.date}</p> */}
+          <p className="event-name">Days until '{this.state.nextHoliday.occasion}'</p>
+          <p className="event-date">{this.state.nextHoliday.date}</p>
         </div>
     );
   }
