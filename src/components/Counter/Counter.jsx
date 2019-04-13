@@ -1,9 +1,15 @@
 import React from 'react';
 
 class Counter extends React.Component {
-  render() {
+
+  render() {    
     return ( 
-      <p>Counter</p> 
+      <div>
+        <p>Days</p>
+        <p>Hours</p>
+        <p>Minutes</p>
+        <p>Seconds</p>
+      </div>
     );
   }
 }
