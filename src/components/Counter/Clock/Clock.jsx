@@ -32,16 +32,20 @@ class Clock extends React.Component {
     });
   }
   
+  addZero(number) {
+    return number < 10 ? '0' + number : number;
+  }
+
   render() {
 
     const { days, hours, minutes, seconds} = this.state;
 
     return(
       <div className="clock">
-        <div className="countdown-days"> {days} days</div>
-        <div className="countdown-hours"> {hours} hours</div>
-        <div className="countdown-minutes"> {minutes} minutes</div>
-        <div className="countdown-seconds"> {seconds} seconds</div>
+        <div className="countdown-days"> {this.addZero(days)} days</div>
+        <div className="countdown-hours"> {this.addZero(hours)} hours</div>
+        <div className="countdown-minutes"> {this.addZero(minutes)} minutes</div>
+        <div className="countdown-seconds"> {this.addZero(seconds)} seconds</div>
       </div>
     )
   }
