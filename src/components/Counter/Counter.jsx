@@ -27,14 +27,13 @@ class Counter extends React.Component {
     
     const holidayList = HolidayList;
     const today = Date.parse(new Date());
+    
     const nearestDate = this.getNearestDate(holidayList, today);
 
     holidayList.map((item, index) => ( 
       (Date.parse(item.date) - today) === nearestDate && 
         this.setState({ 
           nextHoliday: item 
-        }, () => {
-          document.title = 'Days until ' + this.state.nextHoliday.occasion;
         })
       ) 
     );
@@ -42,11 +41,13 @@ class Counter extends React.Component {
   }
 
   getNearestDate(holidayList, today) {
+    
     const datesList = holidayList.map((item, index) => { 
       return Date.parse(item.date) - today;
     });
 
     var nearest = 0;
+
     for (var i = 0; i < datesList.length; i++) {
       if(datesList[i] > nearest && datesList[i] > 0) {
         nearest = datesList[i];
@@ -59,7 +60,7 @@ class Counter extends React.Component {
   render() {
 
     const nextHolidayDate = Date.parse(this.state.nextHoliday.date);
-    
+
     return ( 
         <div className="event-container">
           <Clock nextHolidayDate={nextHolidayDate} />
