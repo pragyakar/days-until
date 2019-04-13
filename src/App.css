@@ -7,6 +7,7 @@
   text-align: center;
   color: var(--text-color);
   background-color: var(--secondary-color);
+  transition: 0.4s ease;
 }
 
 .event-name {
@@ -39,6 +40,7 @@
   text-align: center;
   text-transform: uppercase;
   margin: 10px;
+  transition: 0.4s ease;
 }
 
 .cd-digits {
@@ -49,4 +51,36 @@
 
 .cd-label {
   font-size: 25px;
+}
+
+@media (max-width: 600px) { 
+  .cd-box {
+    padding: 15px;
+    margin: 5px;
+    transition: 0.4s ease;
+  }
+
+  .cd-digits {
+    font-size: 40px;
+  }
+  
+  .cd-label {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) { 
+  .cd-box {
+    padding: 25px;
+    margin: 10px;
+    transition: 0.4s ease;
+  }
+
+  .cd-digits {
+    font-size: 50px;
+  }
+  
+  .cd-label {
+    font-size: 15px;
+  }
 }
