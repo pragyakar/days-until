@@ -1,5 +1,9 @@
 ## Days-Until
-Holidays Countdown for FuseMachines Nepal
+
+Here's to the lazy ones.
+
+Holidays Countdown for FuseMachines Nepal. 
+https://pragyakarfuse.github.io/days-until/
 
 ### Prerequisites
 You will need the following things properly installed on your laptop/pc.
@@ -20,7 +24,7 @@ Clone the repository and install dependencies
 ### Running / Development
 
 * `yarn start`
-* Visit your app at [http://localhost:3000](http://localhost:3000/)
+* Visit your app at [http://localhost:3000/](http://localhost:3000/)
 
 ### Building and Deploying with gh-pages
 
