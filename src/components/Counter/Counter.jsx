@@ -63,8 +63,11 @@ class Counter extends React.Component {
 
     return ( 
         <div className="event-container">
-          <p className="app-title">Days until next holiday 
-          <a 
+          <p className="app-title">
+            Days until next holiday 
+            <br />
+            <br />
+           <a 
             href="https://fusemachines.com.np/" 
             className="logo" 
             target="_blank"
