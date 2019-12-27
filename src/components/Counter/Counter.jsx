@@ -77,11 +77,11 @@ class Counter extends React.Component {
           <span className="event-name">{this.state.nextHoliday.occasion}</span>
           <span className="event-date">({this.state.nextHoliday.date})</span>
           {this.state.nextHoliday.remarks &&
-            <span className="event-remarks">Note: {this.state.nextHoliday.remarks}</span>
+            <span className="event-remarks">{this.state.nextHoliday.remarks}</span>
           }
         </div>
     );
   }
 }
 
-export default Counter;                         
+export default Counter;
